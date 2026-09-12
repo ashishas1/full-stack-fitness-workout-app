@@ -48,3 +48,6 @@ process.on('uncaughtException', (error) => {
   logger.error('Uncaught Exception thrown:', error);
   gracefulShutdown('uncaughtException');
 });
+
+export default app;
+
