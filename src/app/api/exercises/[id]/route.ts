@@ -5,6 +5,8 @@ import { exercises } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 import { AREA_ACCENT } from "@/lib/utils";
 
+export const dynamic = "force-dynamic";
+
 async function ownedCustom(id: number, userId: number) {
   const rows = await db
     .select()

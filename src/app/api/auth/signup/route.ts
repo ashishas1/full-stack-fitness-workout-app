@@ -5,6 +5,8 @@ import { users } from "@/db/schema";
 import { createSession, hashPassword } from "@/lib/auth";
 import { seedStarterPlans } from "@/lib/seed-user";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

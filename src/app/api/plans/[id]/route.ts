@@ -4,6 +4,8 @@ import { db } from "@/db";
 import { exercises, planExercises, plans } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 async function ownedPlan(id: number, userId: number) {
   const rows = await db
     .select()

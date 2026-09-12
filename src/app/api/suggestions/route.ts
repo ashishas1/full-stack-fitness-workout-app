@@ -5,6 +5,8 @@ import { exercises } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 import { suggestExercises } from "@/lib/suggestions";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: Request) {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

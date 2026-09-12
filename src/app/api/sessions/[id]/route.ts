@@ -12,6 +12,8 @@ import {
 } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 async function owned(id: number, userId: number) {
   const rows = await db
     .select()

@@ -4,6 +4,8 @@ import { db } from "@/db";
 import { users } from "@/db/schema";
 import { createSession, verifyPassword } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();

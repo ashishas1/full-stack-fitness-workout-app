@@ -4,6 +4,8 @@ import { db } from "@/db";
 import { exercises, adminAuditLogs } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function PATCH(
   req: Request,
   { params }: { params: Promise<{ id: string }> }

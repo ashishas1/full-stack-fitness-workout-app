@@ -4,6 +4,8 @@ import { db } from "@/db";
 import { plans, sessionLogs, workoutSessions } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

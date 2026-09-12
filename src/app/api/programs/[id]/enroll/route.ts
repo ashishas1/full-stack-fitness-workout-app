@@ -4,6 +4,8 @@ import { db } from "@/db";
 import { workoutPrograms, programEnrollments, notifications } from "@/db/schema";
 import { getCurrentUser } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(
   _req: Request,
   { params }: { params: Promise<{ id: string }> }
