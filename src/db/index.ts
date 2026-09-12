@@ -3,7 +3,7 @@ import { Pool } from "pg";
 
 const databaseUrl =
   process.env.DATABASE_URL ||
-  "postgresql://postgres:postgres@localhost:5433/app_db";
+  "postgresql://neondb_owner:npg_rpMHAIsDc48F@ep-rough-sun-ae7h4n58-pooler.c-2.us-east-2.aws.neon.tech/neondb?channel_binding=require&sslmode=require";
 
 
 const globalForDb = globalThis as typeof globalThis & {

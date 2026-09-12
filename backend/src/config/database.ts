@@ -9,6 +9,7 @@ declare global {
 export const prisma =
   global.prismaGlobal ||
   new PrismaClient({
+    datasourceUrl: env.DATABASE_URL,
     log: env.NODE_ENV === "development" ? ["warn", "error"] : ["error"],
   });
 
